@@ -136,7 +136,6 @@ function main(filename_or_data)
 		if virus_name then
 			m.setvar("tx.antivirus-plugin_virus_name", virus_name)
 			m.setvar("tx.block_malware", "1") -- Set block_malware variable
-			m.setvar("ip.malware_counter=+1") -- Increment malware counter atomically
 			if data_type == "file" then
 				local real_file_name = "<unknown>"
 				-- Because ModSecurity v3 doesn't support FILES_TMPNAMES within Lua, file name detection feature is available only for v2.
