@@ -140,14 +140,7 @@ Default value: 4096
 
 ## Testing
 
-After configuration, antivirus protection should be tested, for example, using:  
-`curl http://localhost --form "data=@eicar.com"`
-
-Using default CRS configuration, this request should end with status 403 with
-the following message in the log:
-`ModSecurity: Access denied with code 403 (phase 2). String match "{HEX}EICAR.TEST.3.UNOFFICIAL" at TX:antivirus-plugin_virus_name. [file "/path/plugins/antivirus-before.conf"] [line "11"] [id "9502110"] [msg "Virus {HEX}EICAR.TEST.3.UNOFFICIAL found in uploaded file eicar.com."] [data "Virus {HEX}EICAR.TEST.3.UNOFFICIAL found in uploaded file eicar.com."] [severity "CRITICAL"] [ver "antivirus-plugin/1.0.0"] [tag "capec/1000/262/441/442"] [hostname "localhost"] [uri "/"] [unique_id "Yefjb9gVcLh21zSVoqRv5wAAAFs"]`
-
-Get eicar test file from [https://secure.eicar.org/eicar.com](https://secure.eicar.org/eicar.com).
+Updating
 
 ## Virus signatures
 
@@ -160,8 +153,6 @@ of virus signatures suitable for protection of web applications.
 | ClamAV               | https://malware.expert/signatures/ | PHP malware | commercial |
 
 ## License
-
-Copyright (c) 2021-2022 OWASP CRS project. All rights reserved.
 
 The OWASP CRS and its official plugins are distributed
 under Apache Software License (ASL) version 2. Please see the enclosed LICENSE
