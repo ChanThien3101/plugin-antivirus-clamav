@@ -153,7 +153,7 @@ After configuration, antivirus protection should be tested, for example, using:
 python test_RequestBody.py
 ```
 
-You can also experiment with the malicious files inside Malware.rar.
+You can also experiment with the malicious files inside malware.rar.
 
 ## Virus signatures
 
