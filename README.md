@@ -149,7 +149,9 @@ Default value: 4096
 ## Testing
 
 After configuration, antivirus protection should be tested, for example, using:
-```python test_RequestBody.py```
+```
+python test_RequestBody.py
+```
 
 You can also experiment with the malicious files inside Malware.rar.
 
