@@ -2,7 +2,13 @@
 
 ## Description of Mechanics
 
-The Antivirus Plugin operates by scanning uploaded files or request bodies for malware using ClamAV, integrated via a Lua script. Key variables like `TX:ANTIVIRUS-PLUGIN_ENABLED` control the plugin's activation, while `TX:ANTIVIRUS-PLUGIN_SCAN_UPLOADED_FILE` and `TX:ANTIVIRUS-PLUGIN_SCAN_REQUEST_BODY` determine whether files or request bodies are scanned. Files temporarily stored in `FILES_TMPNAMES` are processed in chunks defined by `TX:ANTIVIRUS-PLUGIN_CLAMAV_CHUNK_SIZE_BYTES`. If a virus is detected, the name is stored in `TX:ANTIVIRUS-PLUGIN_VIRUS_NAME`, and the flag `TX:BLOCK_MALWARE` is set to block the request. The plugin tracks malicious activity per IP using `IP:MALWARE_COUNTER`, and if it exceeds `TX:MALWARE_BURST_COUNTER`, the IP is blocked for `TX:BLOCK_MALWARE_TIMEOUT`.
+The Antivirus Plugin operates by scanning uploaded files or request bodies for malware using ClamAV, 
+ntegrated via a Lua script. Key variables like `TX:ANTIVIRUS-PLUGIN_ENABLED` control the plugin's activation, 
+while `TX:ANTIVIRUS-PLUGIN_SCAN_UPLOADED_FILE` and `TX:ANTIVIRUS-PLUGIN_SCAN_REQUEST_BODY` determine whether files 
+or request bodies are scanned. Files temporarily stored in `FILES_TMPNAMES` are processed in chunks defined 
+by `TX:ANTIVIRUS-PLUGIN_CLAMAV_CHUNK_SIZE_BYTES`. If a virus is detected, the name is stored in `TX:ANTIVIRUS-PLUGIN_VIRUS_NAME`, 
+and the flag `TX:BLOCK_MALWARE` is set to block the request. The plugin tracks malicious activity per 
+P using `IP:MALWARE_COUNTER`, and if it exceeds `TX:MALWARE_BURST_COUNTER`, the IP is blocked for `TX:BLOCK_MALWARE_TIMEOUT`.
 
 ## Prerequisities
 
@@ -142,7 +148,10 @@ Default value: 4096
 
 ## Testing
 
-Updating
+After configuration, antivirus protection should be tested, for example, using:
+```python test_RequestBody.py```
+
+You can also experiment with the malicious files inside Malware.rar.
 
 ## Virus signatures
 
