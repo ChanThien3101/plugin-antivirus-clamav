@@ -13,7 +13,7 @@ The Antivirus Plugin operates by scanning uploaded files or request bodies for m
 
 ## How to determine whether you have Lua support in ModSecurity
 
-Most modern distro packages come with Lua support compiled in. If you are unsure, or if you get odd error messages (e.g. `EOL found`) chances are you are unlucky. To be really sure look for ModSecurity announce Lua support when launching your web server:
+Most modern distro packages come with Lua support compiled in. If you are unsure, or if you get odd error messages (e.g. `EOL found`) chances are you are unlucky. To be really sure look for ModSecurity announce Lua support when launching your web server.
 
 ```
 ...
@@ -135,6 +135,4 @@ of virus signatures suitable for protection of web applications.
 
 ## License
 
-The OWASP CRS and its official plugins are distributed
-under Apache Software License (ASL) version 2. Please see the enclosed LICENSE
-file for full details.
+Please see the enclosed LICENSE file for full details.
