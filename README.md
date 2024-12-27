@@ -13,15 +13,26 @@ The Antivirus Plugin operates by scanning uploaded files or request bodies for m
 
 ## Variables
 
-| Variable                   | Description                                                 |
-| -------------------------- | ----------------------------------------------------------- |
-| `TX:ANTIVIRUS-PLUGIN_ENABLED`            | Enables or disables the antivirus plugin. Default is 1 (enabled).|
-| `TX:ANTIVIRUS-PLUGIN_SCAN_UPLOADED_FILE` | Scans uploaded files if set to 1. Default is enabled.|
-| `TX:ANTIVIRUS-PLUGIN_SCAN_REQUEST_BODY`  | Scans request body if set to 1. Default is disabled (0).|
-| `TX:ANTIVIRUS-PLUGIN_MAX_DATA_SIZE_BYTES`| Maximum size of data to scan (in bytes).              |
-| `TX:ANTIVIRUS-PLUGIN_NETWORK_TIMEOUT_SECONDS`| Timeout for connecting to ClamAV (in seconds).|
-| `TX:ANTIVIRUS-PLUGIN_CLAMAV_CONNECT_TYPE`  | Connection type to ClamAV: socket or tcp. Default is socket.|
-| `TX:ANTIVIRUS-PLUGIN_CLAMAV_SOCKET_FILE`     | Path to the Unix socket for ClamAV when using socket.|
+| Variable                                     | Description                                                      |
+| -------------------------------------------- | -----------------------------------------------------------      |
+| `TX:ANTIVIRUS-PLUGIN_ENABLED`                | Enables or disables the antivirus plugin. Default is 1 (enabled).|
+| `TX:ANTIVIRUS-PLUGIN_SCAN_UPLOADED_FILE`     | Scans uploaded files if set to 1. Default is enabled.            |
+| `TX:ANTIVIRUS-PLUGIN_SCAN_REQUEST_BODY`      | Scans request body if set to 1. Default is disabled (0).         |
+| `TX:ANTIVIRUS-PLUGIN_MAX_DATA_SIZE_BYTES`    | Maximum size of data to scan (in bytes).                         |
+| `TX:ANTIVIRUS-PLUGIN_NETWORK_TIMEOUT_SECONDS`| Timeout for connecting to ClamAV (in seconds).                   |
+| `TX:ANTIVIRUS-PLUGIN_CLAMAV_CONNECT_TYPE`    | Connection type to ClamAV: socket or tcp. Default is socket.     |
+| `TX:ANTIVIRUS-PLUGIN_CLAMAV_SOCKET_FILE`     | Path to the Unix socket for ClamAV when using socket.            |
+| `TX:ANTIVIRUS-PLUGIN_CLAMAV_ADDRESS`         | IP address or hostname for ClamAV when using tcp                 |
+| `TX:ANTIVIRUS-PLUGIN_CLAMAV_PORT`            | Port number for ClamAV when using tcp. Default is 3310.          |
+| `TX:ANTIVIRUS-PLUGIN_CLAMAV_CHUNK_SIZE_BYTES`| Chunk size (in bytes) sent to ClamAV during scanning.            |
+| `TX:ANTIVIRUS-PLUGIN_VIRUS_NAME`             | Name of the detected virus.                                      |
+| `TX:BLOCK_MALWARE`                           | Flag set to 1 when a virus is detected, blocking the request.    |
+| `IP:MALWARE_COUNTER`                         | Counts malware detections from a single IP.                      |
+| `TX:MALWARE_BURST_COUNTER`                   | Threshold for malware detections from one IP before blocking.    |
+| `TX:BLOCK_MALWARE_TIMEOUT`                   | Duration (in seconds) for blocking an IP.                        |
+
+
+
 
 ## How to determine whether you have Lua support in ModSecurity
 
