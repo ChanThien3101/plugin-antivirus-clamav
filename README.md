@@ -11,6 +11,18 @@ The Antivirus Plugin operates by scanning uploaded files or request bodies for m
  * ModSecurity `SecTmpSaveUploadedFiles` directive is `On` for modsecurity vr2 or
    `SecUploadKeepFiles` directive is set to either `On`
 
+## Variables
+
+| Variable                   | Description                                                 |
+| -------------------------- | ----------------------------------------------------------- |
+| `TX:ANTIVIRUS-PLUGIN_ENABLED`            | Enables or disables the antivirus plugin. Default is 1 (enabled).|
+| `TX:ANTIVIRUS-PLUGIN_SCAN_UPLOADED_FILE` | Scans uploaded files if set to 1. Default is enabled.|
+| `TX:ANTIVIRUS-PLUGIN_SCAN_REQUEST_BODY`  | Scans request body if set to 1. Default is disabled (0).|
+| `TX:ANTIVIRUS-PLUGIN_MAX_DATA_SIZE_BYTES`| Maximum size of data to scan (in bytes).              |
+| `TX:ANTIVIRUS-PLUGIN_NETWORK_TIMEOUT_SECONDS`| Timeout for connecting to ClamAV (in seconds).|
+| `TX:ANTIVIRUS-PLUGIN_CLAMAV_CONNECT_TYPE`  | Connection type to ClamAV: socket or tcp. Default is socket.|
+| `TX:ANTIVIRUS-PLUGIN_CLAMAV_SOCKET_FILE`     | Path to the Unix socket for ClamAV when using socket.|
+
 ## How to determine whether you have Lua support in ModSecurity
 
 Most modern distro packages come with Lua support compiled in. If you are unsure, or if you get odd error messages (e.g. `EOL found`) chances are you are unlucky. To be really sure look for ModSecurity announce Lua support when launching your web server.
@@ -136,3 +148,5 @@ of virus signatures suitable for protection of web applications.
 ## License
 
 Please see the enclosed LICENSE file for full details.
+
+## Contacts
