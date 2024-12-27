@@ -1,4 +1,4 @@
-# CRS - Antivirus With ClamAV Plugin
+# CRS - Antivirus Plugin with ClamAV Integration
 
 ## Description of Mechanics
 
