@@ -32,8 +32,6 @@ The Antivirus Plugin operates by scanning uploaded files or request bodies for m
 | `TX:BLOCK_MALWARE_TIMEOUT`                   | Duration (in seconds) for blocking an IP.                        |
 
 
-
-
 ## How to determine whether you have Lua support in ModSecurity
 
 Most modern distro packages come with Lua support compiled in. If you are unsure, or if you get odd error messages (e.g. `EOL found`) chances are you are unlucky. To be really sure look for ModSecurity announce Lua support when launching your web server.
