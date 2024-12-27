@@ -2,7 +2,7 @@
 
 ## Description of Mechanics
 
-The Antivirus Plugin operates by scanning uploaded files or request bodies for malware using ClamAV, integrated via a Lua script. Key variables like `tx.antivirus-plugin_enabled` control the plugin's activation, while `tx.    antivirus-plugin_scan_uploaded_file` and `tx.antivirus-plugin_scan_request_body` determine whether files or request bodies are scanned. Files temporarily stored in `FILES_TMPNAMES` are processed in chunks defined by `tx.antivirus-plugin_clamav_chunk_size_bytes`. If a virus is detected, the name is stored in `tx.antivirus-plugin_virus_name`, and the flag `tx.block_malware` is set to block the request. The plugin tracks malicious activity per IP using `ip.malware_counter`, and if it exceeds `tx.malware_burst_counter`, the IP is blocked for `tx.block_malware_timeout`.
+The Antivirus Plugin operates by scanning uploaded files or request bodies for malware using ClamAV, integrated via a Lua script. Key variables like `tx.antivirus-plugin_enabled` control the plugin's activation, while `tx.antivirus-plugin_scan_uploaded_file` and `tx.antivirus-plugin_scan_request_body` determine whether files or request bodies are scanned. Files temporarily stored in `FILES_TMPNAMES` are processed in chunks defined by `tx.antivirus-plugin_clamav_chunk_size_bytes`. If a virus is detected, the name is stored in `tx.antivirus-plugin_virus_name`, and the flag `tx.block_malware` is set to block the request. The plugin tracks malicious activity per IP using `ip.malware_counter`, and if it exceeds `tx.malware_burst_counter`, the IP is blocked for `tx.block_malware_timeout`.
 
 ## Prerequisities
 
