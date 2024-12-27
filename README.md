@@ -1,4 +1,4 @@
-# OWASP CRS - Antivirus Plugin
+# CRS - Antivirus With ClamAV Plugin
 
 ## Description of Mechanics
 
